@@ -1,6 +1,6 @@
 # vuedemo
 
-> studaydemo
+> ts 应用在vue中测试，以及 vuex的引入使用和 vuex持久化的应用
 
 ## Build Setup
 

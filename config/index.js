@@ -45,7 +45,7 @@ module.exports = {
     proxyTable: {
       '/index': {
         // 测试环境
-        target: 'http://cost.pmp.jd.com/',  // 接口域名
+        target: 'http://cost.pmp.1212.com/',  // 接口域名
         changeOrigin: true,  //是否跨域
         secure: false,
         pathRewrite: {
