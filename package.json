@@ -14,7 +14,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.2.0",
     "vue": "^2.5.2",
     "vue-class-component": "^6.3.2",
     "vue-property-decorator": "^7.2.0",

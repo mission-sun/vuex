@@ -2,24 +2,29 @@
   <div id="app">
     <router-view/>
 
-    <h1>vuex 代码测试</h1>
+    <!-- <h1>vuex 代码测试</h1> -->
+    <!-- <div>
+      <Vuex01 />
+      <Vuex02 />
+      <Com :propsTitel="name"  @changeName='getChildData' />
+      <MySlot>
+        <div style="color:red"> 我是颜色一</div>
+      </MySlot>
+      <MySlot>
+        <div style="color:blue"> 我是颜色二</div>
+      </MySlot>
+    </div> -->
     <div>
-      <h1>{{ count }}</h1>
-      <!-- <h2>{{ countString }}</h2> -->
-    </div>
-    <div>
-    <button @click="add">+</button>
-    <button @click="reduce">-</button>
-
-    <p>
-      <button @click="addAction">+</button>
-      <button @click="reduceAction">-</button>
-    </p>
 </div>
   </div>
 </template>
 
 <script>
+
+import Vuex01 from './components/vuex01'
+import Vuex02 from './components/vuex02'
+import Com from './components/com'
+import MySlot from './components/mySlot'
 import { mapState, mapMutations, mapGetters, mapActions } from 'vuex';
 
 // mapState 方便我们快速获取state中的值
@@ -32,17 +37,28 @@ export default {
       name:'1212'
     }
   },
+  components: {
+    Vuex01,
+    Vuex02,
+    Com,
+    MySlot
+  },
   // methods:mapMutations([
   //   'add','reduce'
   // ]),
   methods: {
-    ...mapMutations([
-      'add','reduce'
-    ]),
-    ...mapActions([
-      'addAction',
-      'reduceAction'
-    ])
+    // ...mapMutations([
+    //   'add',
+    //   'reduce'
+    // ]),
+    // ...mapActions([
+    //   'addAction',
+    //   'reduceAction'
+    // ])
+    getChildData(data) {
+      this.name = data;
+      console.log('data', data)
+    }
   },
 
 
@@ -60,8 +76,17 @@ export default {
   // 因为computed 中只有一个计算属性
 
   computed: {
-    ...mapState(['count']),
-    ...mapGetters(['count'])
+    // count() {
+    //   console.log('store', this.$store.state)
+    //   return this.$store.state.moduleA.count
+    // },
+    // ...mapState({
+    //   // count:state => state.moduleA.count
+    // }),
+    // ...mapState('moudleA',{
+    //   count: state => state.moduleA.count
+    // })
+    // ...mapGetters(['count']
   }
 }
 </script>

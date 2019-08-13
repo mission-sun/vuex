@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
      <button @click="getData()">点击获取数据</button>
      <p v-for="(item, index) in student" :key="index" @click="changeSex(index)">
        {{item.name}}：{{ item.age }}: {{item.sex}}
