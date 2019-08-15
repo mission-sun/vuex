@@ -14,7 +14,7 @@
         <div style="color:blue"> 我是颜色二</div>
       </MySlot>
     </div> -->
-    <div>
+     <div>
 </div>
   </div>
 </template>
